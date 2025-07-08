@@ -1,0 +1,52 @@
+@charset "UTF-8";
+
+@import url(reset.css);
+@import url(font.css);
+body {background: #CFD8DD;}
+
+.wrap {overflow: hidden; position: relative;}
+.site_main {position: absolute; top: 0; left: 0; z-index: 10; width: 100%;}
+.site_main img {width: 100%;}  
+.site_river img {width: 100%;}
+
+.light {position: fixed; left: 0; top: 0;}
+
+.plane_source {position: absolute; top: 0; left: 0; z-index: 2; width: 100%; z-index: 20;}
+/* stroke-width:폭 */
+/* stroke-dasharray:높이 간격 */
+.plane_source .plane_shadow {position: absolute; top: 100px; left: 100px; width: 100%; filter: blur(10px) grayscale(1) brightness(0); opacity: 0.5; }
+.plane_source .plane_shadow > div {position: absolute; top: 0; left: 0; width: 100%; }
+.plane_source .plane_shadow svg rect {width: 100%; height: 10000px;}
+
+.plane_source .plane_box {position: absolute; top: 0; left: 0; width: 100%; }
+.plane_source .plane_box > div {position: absolute; top: 0; left: 0; width: 100%; }
+.plane_source .plane_box svg rect {width: 100%; height: 10000px;}
+
+
+
+.plane_body1 svg {stroke-width:14px; stroke-dasharray: 70px 10000px; stroke-dashoffset: -106px; stroke:#F7B53F; }
+.plane_body1_2 svg {stroke-width:8px; stroke-dasharray: 70px 10000px; stroke-dashoffset: -106px; stroke:#FFC459; }
+
+.plane_body_top1 svg {stroke-width:14px; stroke-dasharray: 56px 10000px; stroke-dashoffset: -106px; stroke:#E45127; }
+.plane_body_top1_2 svg {stroke-width:4px; stroke-dasharray: 70px 10000px; stroke-dashoffset: -106px; stroke:rgba(255,255,255,0.4); }
+
+.plane_wing1 svg {stroke-width:70px; stroke-dasharray: 20px 10000px; stroke-dashoffset: -140px; stroke:#107C7B; }
+.plane_wing1_2 svg {stroke-width:66px; stroke-dasharray: 16px 10000px; stroke-dashoffset: -142px; stroke:#249291; }
+.plane_wing1_3 svg {stroke-width:62px; stroke-dasharray: 12px 10000px; stroke-dashoffset: -144px; stroke:#107C7B; }
+.plane_wing1_4 svg {stroke-width:58px; stroke-dasharray: 8px 10000px; stroke-dashoffset: -146px; stroke:#006C6B; }
+
+.plane_wing2 svg {stroke-width:40px; stroke-dasharray: 12px 10000px; stroke-dashoffset: -106px; stroke:#107C7B; }
+.plane_wing2_2 svg {stroke-width:36px; stroke-dasharray: 10px 10000px; stroke-dashoffset: -106px; stroke:#249291; }
+.plane_wing2_3 svg {stroke-width:32px; stroke-dasharray: 6px 10000px; stroke-dashoffset: -109px; stroke:#107C7B; }
+
+.plane_people svg {stroke-width:8px; stroke-dasharray: 16px 10000px; stroke-dashoffset: -135px; stroke:#972525; stroke-linecap: round;}
+
+.plane_tail svg {stroke-width:3px; stroke-dasharray: 14px 10000px; stroke-dashoffset: -106px; stroke:#094D4D;}
+.plane_fella svg {stroke-width:30px; stroke-dasharray: 2px 10000px; stroke-dashoffset: -174px; stroke:#094D4D;}
+
+
+
+
+.plane_source > div svg path {
+    transition: stroke-dashoffset 0.2s ease-out;
+}
